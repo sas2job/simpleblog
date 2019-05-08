@@ -1,1 +1,15 @@
-<h2>Adding a new post</h2>
+<h2><%= @heading %></h2>
+<%= form_for :post, url: posts_path do |f| %>
+
+<p>
+    Post title <br>
+    <%= f.text_field :title %>
+</p>
+<p>
+    Article text <br>
+    <%= f.text_area :body %>
+</p>
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
