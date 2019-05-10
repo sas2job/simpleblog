@@ -3,10 +3,10 @@ h2= @heading
   p
     | Post title
     br/
-    = f.text_field :title
+    = f.text_field(:title, {:class => 'form-control'})
   p
     | Article text
     br/
-    = f.text_area :body
+    = f.text_area(:body, {:class => 'form-control'})
   p
     = f.submit
