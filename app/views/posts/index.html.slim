@@ -1,4 +1,6 @@
 h2 All our posts
 - @post.each do |post|
-  h3= post.title
-  p= post.body
+  .alert.alert-light
+    h3= post.title
+    p= post.body
+    = link_to "Read more", post_path(post), :class => 'btn btn-outline-primary'
