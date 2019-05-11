@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     
     def new
         @heading = "Adding a new post"
+        @post = Post.new
     end
     
     def show

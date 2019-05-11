@@ -1,5 +1,9 @@
 h2= @heading
 = form_for :post, url: posts_path do |f|
+  = if @post.errors.any?
+    - @post.errors.full_messages.each do |msg|
+      .alert.alert-danger
+        = msg
   p
     | Post title
     br/
