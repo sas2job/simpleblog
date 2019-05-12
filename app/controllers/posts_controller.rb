@@ -12,6 +12,11 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
     end
 
+    def edit
+        @heading = "Editing a new post"
+        @post = Post.find(params[:id])
+    end
+
     def create
         #render plain: params[:post].inspect
         @post = Post.new(post_params)

@@ -1,0 +1,16 @@
+h2= @heading
+= form_for :post, url: post_path(@post), method: :patch do |f|
+  - if @post.errors.any?
+    - @post.errors.full_messages.each do |msg|
+      .alert.alert-danger
+        = msg
+  p
+    | Post title
+    br/
+    = f.text_field(:title, {:class => 'form-control'})
+  p
+    | Article text
+    br/
+    = f.text_area(:body, {:class => 'form-control'})
+  p
+    = f.submit
