@@ -1,6 +1,6 @@
 <h2><%= @heading %></h2>
 <%= form_for :post, url: posts_path do |f| %>
-    <%= if @post.errors.any? %>
+    <% if @post.errors.any? %>
         <% @post.errors.full_messages.each do |msg|%>
         <div class="alert alert-danger">
             <%= msg %>
@@ -16,6 +16,6 @@
         <%= f.text_area(:body, {:class => 'form-control'}) %>
     </p>
     <p>
-        <%= f.submit %>
+        <%= f.submit({:class => 'btn btn-success'}) %>
     </p>
 <% end %>
