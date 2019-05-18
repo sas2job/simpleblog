@@ -2,3 +2,4 @@
 <p><%= @post.body %></p>
 <hr>
 <%= link_to "Edit", edit_post_path, :class => 'btn btn-warning' %>
+<%= link_to "Delete", post_path, method: :delete, data: {confirm:"Are you sure you want to delete the article?"}, :class => 'btn btn-danger' %>
